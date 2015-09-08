@@ -7,7 +7,6 @@ namespace TRAKNUS.Models
 {
     public class AccountPayableModel
     {
-
         public string company_code { get; set; }
         public long document_number { get; set; }
         public int fiscal_year { get; set; }
@@ -25,12 +24,12 @@ namespace TRAKNUS.Models
         public string dc_indicatior { get; set; }
         public string account_type { get; set; }
         public string special_gl_indicator { get; set; }
-        public string target_special_gl_indicator { get; set; }
-        public string gl_account { get; set; }
+        public string target_special_gl_indicator { get; set; }//null
+        public string gl_account { get; set; }//null
         public long gl_account_number { get; set; }
         public float amount_in_document { get; set; }
         public long amount_in_local_currency { get; set; }
-        public string tax_code { get; set; }
+        public string tax_code { get; set; }//null
         public string business_area { get; set; }
         public string cost_center { get; set; }
         public string profit_center { get; set; }
@@ -41,18 +40,18 @@ namespace TRAKNUS.Models
         public string keterangan { get; set; }
         public long invoice_reference_dan_tahun { get; set; }
         public int payment_reference { get; set; }
-        public int purchasing_order_number { get; set; }
+        public int purchasing_order_number { get; set; }//null
         public int purchasing_order_item { get; set; }
-        public int seles_order_number { get; set; }
+        public int seles_order_number { get; set; }//null
         public int sales_order_item { get; set; }
-        public int billing { get; set; }
-        public int product { get; set; }
-        public string bstkd { get; set; }
+        public int billing { get; set; }//null
+        public int product { get; set; }//null
+        public string bstkd { get; set; }//null
         public string salesman { get; set; }
-        public string nama_salesman { get; set; }
+        public string nama_salesman { get; set; }//null
         public string leasing { get; set; }
-        public string nama_leasing { get; set; }
-        public int nilai_bill_docur { get; set; }
-        public int nilai_bill_locur { get; set; }
+        public string nama_leasing { get; set; }//null
+        public int nilai_bill_docur { get; set; }//null
+        public int nilai_bill_locur { get; set; }//null
     }
 }

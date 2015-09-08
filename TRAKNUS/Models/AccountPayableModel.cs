@@ -7,6 +7,7 @@ namespace TRAKNUS.Models
 {
     public class AccountPayableModel
     {
+
         public string company_code { get; set; }
         public long document_number { get; set; }
         public int fiscal_year { get; set; }

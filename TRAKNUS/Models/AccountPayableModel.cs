@@ -47,9 +47,9 @@ namespace TRAKNUS.Models
         public int billing { get; set; }//null
         public int product { get; set; }//null
         public string bstkd { get; set; }//null
-        public string salesman { get; set; }
+        public int salesman { get; set; }
         public string nama_salesman { get; set; }//null
-        public string leasing { get; set; }
+        public int leasing { get; set; }
         public string nama_leasing { get; set; }//null
         public int nilai_bill_docur { get; set; }//null
         public int nilai_bill_locur { get; set; }//null

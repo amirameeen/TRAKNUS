@@ -1,0 +1,262 @@
+﻿@model IEnumerable<TRAKNUS.Models.AccountPayableModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#data_table').dataTable({
+					"paging":   true,
+					"ordering": true,
+					"info":     true,
+					"bLengthChange":false,
+					"searching":true,
+					"bAutoWidth":true,
+					"iDisplayLength": 100
+				});
+            });
+
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+
+</script>
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="table-responsive">
+    <table class="table table-striped table-hover table-bordered" id="data_table">
+        <thead>
+            <tr>
+                <th>
+                    COMPANY CODE
+                </th>
+                <th>
+                    DOCUMENT NUMBER
+                </th>
+                <th>
+                    FISCAL YEAR
+                </th>
+                <th>
+                    NUMBER IF LINE ITEM
+                </th>
+                <th>
+                    DOCUMENT DATE
+                </th>
+                <th>
+                    POSTING DATE
+                </th>
+                <th>
+                    FISCAL PERIOD
+                </th>
+                <th>
+                    REFERENCE DOCUMENT
+                </th>
+                <th>
+                    DOCUMENT HEADER TEXT
+                </th>
+                <th>
+                    DOCUMENT TYPE
+                </th>
+                <th>
+                    CURRENCY
+                </th>
+                <th>
+                    EXCHANGE RATE
+                </th>
+                <th>
+                    TRANSACTION DATE
+                </th>
+                <th>
+                    TRANSACTION CODE
+                </th>
+                <th>
+                    DEBIT/CREDIT INDICATOR
+                </th>
+                <th>
+                    ACCOUNT TYPE
+                </th>
+                <th>
+                    SPECIAL GL INDICATOR
+                </th>
+               
+                <th>
+                    G/L ACCOUNT/VENDOR
+                </th>
+                <th>
+                    AMOUNT IN DOCUMENT
+                </th>
+                <th>
+                    AMOUNT IN LOCAL CURRENCY
+                </th>
+                <th>
+                    TAX CODE
+                </th>
+                <th>
+                    BUSINESS AREA
+                </th>
+                
+                <th>
+                    VALUE DATE/BASELINE DATE
+                </th>
+                <th>
+                    TERM OF PAYMENT
+                </th>
+                <th>
+                   DAY
+                </th>
+                <th>
+                    ASSIGMENT
+                </th>
+                <th>
+                    TEXT/KETERANGAN
+                </th>
+                <th>
+                    INVOICE REFERENCE DAN TAHUN
+                </th>
+                <th>
+                   PAYMENT REFERENCE
+                </th>
+                
+                <th>
+                    PURCASHING ORDER ITEM
+                </th>
+               
+                <th>
+                   SALES ORDER ITEM
+                </th>
+                
+                <th>
+                    SALESMAN
+                </th>
+                
+                <th>
+                    LEASING
+                </th>
+                
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.company_code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.document_number)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fiscal_year)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.number_of_line_item)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.document_date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.posting_date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fiscal_period)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.reference_document)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.document_header_text)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.document_type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.currency)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.exchange_rate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.transaction_date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.transaction_code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dc_indicatior)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.account_type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.special_gl_indicator)
+                    </td>
+                   
+                    <td>
+                        @Html.DisplayFor(modelItem => item.gl_account_number)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.amount_in_document)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.amount_in_local_currency)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tax_code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.business_area)
+                    </td>
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.value_date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.term_of_payment)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.day)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.assigment)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.keterangan)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.invoice_reference_dan_tahun)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.payment_reference)
+                    </td>
+                   
+                    <td>
+                        @Html.DisplayFor(modelItem => item.purchasing_order_item)
+                    </td>
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.sales_order_item)
+                    </td>
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.salesman)
+                    </td>
+                   
+                    <td>
+                        @Html.DisplayFor(modelItem => item.leasing)
+                    </td>
+                    
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id_ap })
+                        @Html.ActionLink("Details", "Details", new { id = item.id_ap })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id_ap })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

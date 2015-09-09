@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TRAKNUS.Handler;
 
 namespace TRAKNUS.Controllers
 {
@@ -11,7 +12,9 @@ namespace TRAKNUS.Controllers
         // GET: AccountPayable
         public ActionResult Index()
         {
-            return View();
+            AccountPayableHandler aph = new AccountPayableHandler();
+            var data = aph.readText(this.HttpContext);
+            return View(data);
         }
 
         // GET: AccountPayable/Details/5

@@ -13,7 +13,11 @@
 					"bLengthChange":false,
 					"searching":true,
 					"bAutoWidth":true,
-					"iDisplayLength": 100
+					"iDisplayLength": 50,
+					
+					"scrollY": "500px",
+					"scrollCollapse": true,
+					
 				});
             });
 
@@ -27,7 +31,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<div class="table-responsive">
+
     <table class="table table-striped table-hover table-bordered" id="data_table">
         <thead>
             <tr>
@@ -259,4 +263,3 @@
             }
         </tbody>
     </table>
-</div>

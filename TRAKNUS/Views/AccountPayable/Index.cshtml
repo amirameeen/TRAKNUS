@@ -5,19 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <script type="text/javascript" charset="utf-8">
+    $(window).load(function () { $(".preload-wrapper").fadeOut("slow"); })
+
 			$(document).ready(function() {
 				$('#data_table').dataTable({
-					"paging":   true,
-					"ordering": true,
-					"info":     true,
-					"bLengthChange":false,
-					"searching":true,
-					"bAutoWidth":true,
-					"iDisplayLength": 50,
-					
-					"scrollY": "500px",
-					"scrollCollapse": true,
-					
+				    "bLengthChange":false,
+				    "iDisplayLength": 30,				
+					"scrollX": "500px"
 				});
             });
 
@@ -25,13 +19,22 @@
             $('#example').DataTable();
         });
 
+      
 </script>
+
+<div class="preload-wrapper">
+    <div id="preloader_7"></div>
+
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+
+</div>
+
 <h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
     <table class="table table-striped table-hover table-bordered" id="data_table">
         <thead>
             <tr>
@@ -86,7 +89,7 @@
                 <th>
                     SPECIAL GL INDICATOR
                 </th>
-               
+
                 <th>
                     G/L ACCOUNT/VENDOR
                 </th>
@@ -102,7 +105,7 @@
                 <th>
                     BUSINESS AREA
                 </th>
-                
+
                 <th>
                     VALUE DATE/BASELINE DATE
                 </th>
@@ -110,7 +113,7 @@
                     TERM OF PAYMENT
                 </th>
                 <th>
-                   DAY
+                    DAY
                 </th>
                 <th>
                     ASSIGMENT
@@ -122,25 +125,25 @@
                     INVOICE REFERENCE DAN TAHUN
                 </th>
                 <th>
-                   PAYMENT REFERENCE
+                    PAYMENT REFERENCE
                 </th>
-                
+
                 <th>
                     PURCASHING ORDER ITEM
                 </th>
-               
+
                 <th>
-                   SALES ORDER ITEM
+                    SALES ORDER ITEM
                 </th>
-                
+
                 <th>
                     SALESMAN
                 </th>
-                
+
                 <th>
                     LEASING
                 </th>
-                
+
                 <th></th>
             </tr>
         </thead>
@@ -199,7 +202,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.special_gl_indicator)
                     </td>
-                   
+
                     <td>
                         @Html.DisplayFor(modelItem => item.gl_account_number)
                     </td>
@@ -215,7 +218,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.business_area)
                     </td>
-                    
+
                     <td>
                         @Html.DisplayFor(modelItem => item.value_date)
                     </td>
@@ -237,23 +240,23 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.payment_reference)
                     </td>
-                   
+
                     <td>
                         @Html.DisplayFor(modelItem => item.purchasing_order_item)
                     </td>
-                    
+
                     <td>
                         @Html.DisplayFor(modelItem => item.sales_order_item)
                     </td>
-                    
+
                     <td>
                         @Html.DisplayFor(modelItem => item.salesman)
                     </td>
-                   
+
                     <td>
                         @Html.DisplayFor(modelItem => item.leasing)
                     </td>
-                    
+
                     <td>
                         @Html.ActionLink("Edit", "Edit", new { id = item.id_ap })
                         @Html.ActionLink("Details", "Details", new { id = item.id_ap })
